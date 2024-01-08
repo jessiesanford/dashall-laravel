@@ -1,0 +1,526 @@
+/* ==============================================
+BASE.CSS
+Author: Jessie Sanford
+=============================================== */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend
+,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  //font-size: 100%; this is fucking up the font size for some reason
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 11px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1;
+}
+
+p {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+blockquote {
+  margin: 0;
+  padding: 10px 0px 10px 50px;
+  color: #606060;
+  font-style: italic;
+}
+
+ul, ol {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+li {
+  margin: 5px 0px;
+  padding: 0;
+}
+
+form {
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 10px 0px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+fieldset legend {
+  background: #f6f6f6;
+  padding: 5px 10px;
+  color: #606060;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+hr {
+  background: #e0e0e0;
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: 20px 0px;
+  border: 0;
+}
+
+hr.lrg {
+  margin: 40px;
+}
+
+hr.sep {
+  background: #eaeaea;
+  width: 960px;
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: 0px auto;
+  border: 0;
+}
+
+hr.hidden {
+  background: none;
+  border: 1px solid transparent;
+  margin: 10px 0px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #404040;
+  border-spacing: 1px;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f0f0f0;
+  color: #606060;
+}
+
+tfoot {
+  background: #f0f0f0;
+  color: #606060;
+}
+
+th {
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+td.grey {
+  background: #f0f0f0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+select {
+  background: #fff;
+  margin: 2px 0px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  -moz_border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+}
+
+select:focus {
+  outline: none;
+  color: #606060;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.largetext  {
+  font-size: 18px;
+}
+
+.mediumtext {
+  font-size: 14px;
+}
+
+.smalltext {
+  font-size: 12px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.clear {
+  clear: both;
+}
+
+.valign-middle {
+  vertical-align: middle;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.pos_left {
+  left: 0;
+}
+
+.pos_right {
+  right: 0;
+}
+
+.pos_middle {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.no_border {
+  border: none !important;
+}
+
+// global flex row styles start here
+.flex-row {
+  display: flex !important;
+  flex-flow: row;
+  align-items: center;
+
+  &.row-alt {
+    border-bottom: 2px solid #000;
+  }
+
+  &.row_selected {
+    background: #f0f0f0;
+  }
+
+  &.row_error {
+    background: #ffe4e4;
+  }
+
+  &.row_highlight {
+    background: #fff7c8;
+  }
+
+  &.row_center {
+    justify-content: center;
+  }
+
+  &.row-top {
+    align-items: flex-start;
+  }
+
+}
+
+
+.cell {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.cell-right, flex-right {
+  margin-left: auto;
+}
+
+.cell-grow {
+  flex-grow: 1;
+}
+
+/* MARGIN */
+
+.no-push {
+  margin: 0px !important;
+}
+
+.push-top {
+  margin-top: 5px;
+}
+
+.push-top-10 {
+  margin-top: 10px;
+}
+
+.push-top-20 {
+  margin-top: 20px;
+}
+
+.push-top-40 {
+  margin-top: 40px;
+}
+
+.push-left {
+  margin-left: 5px;
+}
+
+.push-left-10 {
+  margin-left: 10px;
+}
+
+.push-left-20 {
+  margin-left: 20px;
+}
+
+.push-right {
+  margin-right: 5px;
+}
+
+.push-right-10 {
+  margin-right: 10px;
+}
+
+.push-right-20 {
+  margin-right: 20px;
+}
+
+.push-bottom {
+  margin-bottom: 5px;
+}
+
+.push-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.push-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.push-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+
+
+/* PADDING */
+
+.no-padd {
+  padding: 0px;
+}
+
+.padd {
+  padding: 5px;
+}
+
+.padd-10 {
+  padding: 10px;
+}
+
+.padd-top {
+  padding-top: 5px;
+}
+
+.padd-top-10 {
+  padding-top: 10px;
+}
+
+.padd-top-20 {
+  padding-top: 20px;
+}
+
+.padd-top-40 {
+  padding-top: 40px;
+}
+
+.padd-bottom {
+  padding-bottom: 5px;
+}
+
+.padd-bottom-10 {
+  padding-bottom: 10px;
+}
+
+.padd-bottom-20 {
+  padding-bottom: 20px;
+}
+
+.padd-bottom-40 {
+  padding-bottom: 40px;
+}
+
+.padd-left {
+  padding-left: 5px;
+}
+
+.padd-left-10 {
+  padding-left: 10px;
+}
+
+.padd-left-20 {
+  padding-left: 20px;
+}
+
+.padd-right {
+  padding-right: 5px;
+}
+
+.padd-right-10 {
+  padding-right: 10px;
+}
+
+.padd-right-20 {
+  padding-right: 20px;
+}
+
+/* WIDTHS */
+
+.wid-5 {
+  width: 5%;
+}
+
+.wid-10 {
+  width: 10%;
+}
+
+.wid-15 {
+  width: 15%;
+}
+
+.wid-20 {
+  width: 20%;
+}
+
+.wid-25 {
+  width: 25%;
+}
+
+.wid-30 {
+  width: 30%;
+}
+
+.wid-40 {
+  width: 40%;
+}
+
+.wid-50 {
+  width: 50%;
+}
+
+.wid-60 {
+  width: 60%;
+}
+
+.wid-70 {
+  width: 70%;
+}
+
+.wid-80 {
+  width: 80%;
+}
+
+.wid-90 {
+  width: 90%;
+}
+
+.wid-100 {
+  width: 100%;
+}
+
+.wid-3rd {
+  width: 33.33%;
+}
+
+/* Force element's box parameter  */
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+
+
+
+
+
+button.btn-small {
+  padding: 5px;
+}
+
+.rounded-corners(@radius: 2px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}

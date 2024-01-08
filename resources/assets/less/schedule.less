@@ -1,0 +1,119 @@
+.calendar_row {
+  background: #f0f0f0;
+  display: flex !important;
+  flex-flow: row no-wrap;
+  align-items: baseline;
+}
+
+.calendar_head_cell {
+  background: #000;
+  width: 14%;
+  padding: 10px;
+}
+
+.calendar_day {
+  background: #fff;
+  width: 14%;
+  padding: 10px;
+  margin: 2px;
+}
+
+.calendar-shift {
+  background: #d53030;
+  margin: 5px 0px;
+  padding: 10px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background: #a22424;
+  }
+}
+
+.calendar-shift.unassigned {
+  font-weight: 300;
+}
+
+.calendar-shift.shift_assigned {
+  background: #808080;
+  color: #c0c0c0;
+  cursor: default;
+}
+
+.calendar-shift.shift_self {
+  background: #1b9721;
+  color: #fff;
+}
+
+.calendar_legend {
+  height: auto !important;
+}
+
+.shift_unavailable {
+  background: #fafafa;
+  color: #a0a0a0;
+}
+
+.shift_pending {
+  opacity: 0.4;
+}
+
+.active_day {
+  color: #ffe300;
+}
+
+.week-view {
+  text-align:center;
+}
+
+.week-row {
+  background: #f0f0f0;
+  display: flex !important;
+  flex-flow: row no-wrap;
+  align-items: baseline;
+}
+
+.week-cell {
+  flex: 1;
+  margin-right: 2px;
+}
+
+.week-cell:last-child {
+  margin-right: 0;
+}
+
+.week-cell-heading {
+  font-weight: 500;
+  padding: 10px;
+}
+
+.week-shift {
+  background: #000;
+  padding: 10px;
+  margin-bottom: 2px;
+  color: #fff;
+  cursor: move;
+  font-size: 12px;
+}
+
+.week-shift:last-child {
+  margin-bottom: 0;
+}
+
+#delete-shift {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 30px 50px;
+  border: 1px solid #e0e0e0;
+}
+
+.drag-delete {
+  background: #d53030;
+  border-color: #d53030;
+  color: #fff;
+}
